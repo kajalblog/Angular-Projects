@@ -6,19 +6,24 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { FoodService } from './service/food/food.service';
-
-const appRoutes:Routes=[
-  // {path:'',component:HeaderComponent},
+import { RatingModule } from 'ng-starrating';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+const appRoutes: Routes = [
+  { path: '', component: HeaderComponent },
 ]
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RatingModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
 
   ],
